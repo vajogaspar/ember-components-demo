@@ -43,7 +43,6 @@ export default Ember.Component.extend({
     }.on('init'),
 
     willDestroy: function() {
-        this.get('parentView').unregisterSlider(this);
         this.$(window).off('resize', this.get('resizeHandler'));
     }.on('willDestroyElement'),
 

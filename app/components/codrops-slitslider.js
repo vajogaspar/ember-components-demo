@@ -36,10 +36,6 @@ export default Ember.Component.extend({
         this.set('slider', slider);
     },
 
-    unregisterSlider: function(slider) {
-        this.set('slider', null);
-    },
-
     registerDotNavigation: function(dotnav) {
         this.set('dotnav', dotnav);
     },
