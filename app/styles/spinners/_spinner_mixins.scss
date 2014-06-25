@@ -1,0 +1,178 @@
+
+@mixin spinner-chasing-dots($color: #333, $width: 40px, $height: 40px) {
+    width: $width;
+    height: $height;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    @include vendor(animation, spinner-rotate 2.0s infinite linear);
+
+    & > span {
+        width: 60%;
+        height: 60%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        background-color: $color;
+        border-radius: 100%;
+
+        @include vendor(animation, spinner-bounce 2.0s infinite ease-in-out);
+    }
+
+    & > span:nth-of-type(2) {
+        top: auto;
+        bottom: 0px;
+        @include vendor(animation-delay, -1.0s);
+    }
+}
+
+@mixin spinner-double-bounce($color: #333, $width: 40px, $height: 40px) {
+    width: $width;
+    height: $height;
+    display: inline-block;
+
+    position: relative;
+    margin: 100px auto;
+
+    & > span {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $color;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        @include vendor(animation, spinner-bounce 2.0s infinite ease-in-out);
+    }
+
+    & > span:nth-of-type(2) {
+        @include vendor(animation-delay, -1.0s);
+    }
+}
+
+@mixin spinner-pulse($color: #333, $width: 40px, $height: 40px) {
+    width: $width;
+    height: $height;
+    background-color: $color;
+    display: inline-block;
+
+    border-radius: 100%;
+    @include vendor(animation, spinner-scaleout 1.0s infinite ease-in-out);
+}
+
+@mixin spinner-rotating-plane($color: #333, $width: 30px, $height: 30px) {
+    width: $width;
+    height: $height;
+    background-color: $color;
+    display: inline-block;
+
+    @include vendor(animation, spinner-rotateplane 1.2s infinite ease-in-out);
+}
+
+@mixin spinner-three-bounce($color: #333, $outerwidth: 70px, $width: 18px, $height: 18px) {
+    width: $outerwidth;
+    text-align: center;
+    display: inline-block;
+
+    & > span {
+        width: $width;
+        height: $height;
+        background-color: $color;
+        border-radius: 100%;
+        display: inline-block;
+        @include vendor(animation, spinner-bouncedelay 1.4s infinite ease-in-out);
+        /* Prevent first frame from flickering when animation starts */
+        @include vendor(animation-fill-mode, both);
+    }
+
+    & > span:nth-of-type(1) {
+        @include vendor(animation-delay, -0.32s);
+    }
+
+    & > span:nth-of-type(2) {
+        @include vendor(animation-delay, -0.16s);
+    }
+}
+
+@mixin spinner-wandering-cubes($color: #333, $outerwidth: 32px, $outerheight: 32px, $width: 10px, $height: 10px) {
+    width: $outerwidth;
+    height: $outerheight;
+    position: relative;
+    display: inline-block;
+
+    & > span {
+        background-color: $color;
+        width: $width;
+        height: $height;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include vendor(animation, spinner-cubemove 1.8s infinite ease-in-out);
+    }
+
+    & > span:nth-of-type(2) {
+        @include vendor(animation-delay, -0.9s);
+    }
+}
+
+@mixin spinner-wave($color: #333, $width: 50px, $height: 30px) {
+    width: $width;
+    height: $height;
+    text-align: center;
+    font-size: 10px;
+    display: inline-block;
+
+    & > span {
+        background-color: $color;
+        height: 100%;
+        width: 6px;
+        display: inline-block;
+        margin: 0 2px;
+        @include vendor(animation, spinner-stretchdelay 1.2s infinite ease-in-out);
+    }
+
+    & > span:nth-of-type(2) {
+        @include vendor(animation-delay, -1.1s);
+    }
+
+    & > span:nth-of-type(3) {
+        @include vendor(animation-delay, -1.0s);
+    }
+
+    & > span:nth-of-type(4) {
+        @include vendor(animation-delay, -0.9s);
+    }
+
+    & > span:nth-of-type(5) {
+        @include vendor(animation-delay, -0.8s);
+    }
+}
+
+@mixin spinner-refreshing($color: #333) {
+    @include vendor(animation, spinner-rotate 1s infinite linear);
+    @include vendor(border-radius, 2.4em);
+
+    border: 0.4em solid $color;
+    border-left-color: transparent;
+    color: transparent;
+    display: inline-block;
+    font-size: 10px;
+    line-height: 1.2;
+    width: 3em;
+    height: 3em;
+}
+
+@mixin spinner-three-quarters($color: #333, $width: 32px, $height: 32px) {
+    @include vendor(animation, spinner-rotate 1250ms infinite linear);
+    border: 8px solid $color;
+    border-right-color: transparent;
+    border-radius: $width/2;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: $width;
+    height: $height;
+}

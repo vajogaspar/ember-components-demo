@@ -1,0 +1,242 @@
+{{#codrops-slitslider classNames="demo-1"}}
+    {{#codrops-slitslider-slides}}
+
+        {{#codrops-slitslider-slide
+            orientation="horizontal"
+            slice1angle="-25"
+            slice2angle="-25"
+            slice1scale="2"
+            slice2scale="2"
+            classNames="bg-1"
+        }}
+            <div class="deco" data-icon="Z"></div>
+            <h2>Web Components - The Ember Way</h2>
+            <blockquote>
+                <p>Reusable custom elements for the Web.</p>
+                <cite>Vajó Gáspár @ Ember.bp Meetup June, 2014.</cite>
+            </blockquote>
+
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="vertical"
+            slice1angle="10"
+            slice2angle="-15"
+            slice1scale="1.5"
+            slice2scale="1.5"
+            classNames="bg-2"
+        }}
+
+            <div class="deco" data-icon="w"></div>
+            <h2>Web Components</h2>
+            <blockquote><p>Reusable custom elements.<br />Web Components = template + behaviour + style<br />Inner structure is hidden in the Shadow DOM. Inspect a video tag!</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="horizontal"
+            slice1angle="4"
+            slice2angle="4"
+            slice1scale="2"
+            slice2scale="1.5"
+            classNames="bg-3"
+        }}
+
+            <div class="deco" data-icon="f"></div>
+            <h2>W3C working draft</h2>
+            <blockquote><p>Coming soon to browsers near you!<br />You can also use polymer.js as a polyfill.</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="vertical"
+            slice1angle="10"
+            slice2angle="-15"
+            slice1scale="1.5"
+            slice2scale="1.5"
+            classNames="bg-2"
+        }}
+
+            <div class="deco" data-icon="z"></div>
+            <h2>Ember.Component</h2>
+            <blockquote><p>Isolated controller/view+template combo.<br />Implementation follows W3C closely.<br />All Ember goodness is available.</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="horizontal"
+            slice1angle="3"
+            slice2angle="3"
+            slice1scale="2"
+            slice2scale="1"
+            classNames="bg-4"
+        }}
+            <div class="deco" data-icon="t"></div>
+            <h2>Describe the behaviour</h2>
+            <blockquote><p>Ember.Component.extend({...});<br />Create custom components by extending the base.<br />And that's it, you can use it in your templates.</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="vertical"
+            slice1angle="-5"
+            slice2angle="25"
+            slice1scale="2"
+            slice2scale="1"
+            classNames="bg-1"
+        }}
+            <div class="deco" data-icon="O"></div>
+            <h2>Use it in your templates</h2>
+            <blockquote><p>\{{ x-foo somevalue=controllerValue action=contextAction someStatic="foobar" }} <br />pass in properties from the controller<br />delegate actions to the controller/route</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="horizontal"
+            slice1angle="4"
+            slice2angle="4"
+            slice1scale="2"
+            slice2scale="1.5"
+            classNames="bg-3"
+        }}
+
+            <div class="deco" data-icon="["></div>
+            <h2>Define templates in handlebars</h2>
+            <blockquote><p>Add markup for the component.<br />You can use other views/components in these templates.</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="vertical"
+            slice1angle="10"
+            slice2angle="-15"
+            slice1scale="1.5"
+            slice2scale="1.5"
+            classNames="bg-5"
+        }}
+            <div class="deco" data-icon="g"></div>
+            <h2>Templateless components</h2>
+            <blockquote><p><br />{{spinner-tag type="spinner-wave"}}<br />...just a regular spinner, no need for template file, styles from css.</p></blockquote>
+
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="vertical"
+            slice1angle="10"
+            slice2angle="-15"
+            slice1scale="1.5"
+            slice2scale="1.5"
+            classNames="bg-2"
+        }}
+
+            <div class="deco" data-icon="a"></div>
+            <h2>Send Actions</h2>
+            <blockquote><p>this.sendAction();<br />Translate the DOM event into something meaningful.<br />Calls the method passed in (action=myAction in the template) <br />Call custom actions by passing in the name: sendAction('actionname', ...)</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="horizontal"
+            slice1angle="3"
+            slice2angle="3"
+            slice1scale="2"
+            slice2scale="1"
+            classNames="bg-4"
+        }}
+            <div class="deco" data-icon="t"></div>
+            <h2>\{{ #block-form }} and \{{ yield }}</h2>
+            <blockquote><p>Use custom markup with block form<br />this.template is truthy when { { yield } } is available.</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="vertical"
+            slice1angle="-5"
+            slice2angle="25"
+            slice1scale="2"
+            slice2scale="1"
+            classNames="bg-5"
+        }}
+            <div class="deco" data-icon="~"></div>
+            <h2>Ember.Evented descendant</h2>
+            <blockquote><p>this.trigger('eventname', args); for signaling<br />comp.on('eventname', fn); -- on the consumer side.</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="horizontal"
+            slice1angle="4"
+            slice2angle="4"
+            slice1scale="2"
+            slice2scale="1.5"
+            classNames="bg-3"
+        }}
+
+            <div class="deco" data-icon="y"></div>
+            <h2>Parent Views</h2>
+            <blockquote><p>Access the encapsulating view/component.<br />this.get('parentView').someFunction() --or-- Ember.computed.alias('parentView.someprop')<br />Can be used to create complex component hiearchies.</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="vertical"
+            slice1angle="-5"
+            slice2angle="25"
+            slice1scale="2"
+            slice2scale="1"
+            classNames="bg-1"
+        }}
+            <div class="deco" data-icon="l"></div>
+            <h2>Component Modularity</h2>
+            <blockquote><p>by using parentView sub-components can cooperate with parent components<br />values can propagate within the hiearchy<br />we can setup observers/listeners or call methods directly on cooperator components<br />see \{{ ic-tabs }} for details.</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="horizontal"
+            slice1angle="3"
+            slice2angle="3"
+            slice1scale="2"
+            slice2scale="1"
+            classNames="bg-2"
+        }}
+            <div class="deco" data-icon="*"></div>
+            <h2>Authoring Components</h2>
+            <blockquote><p>emberella-component-blueprint<br />component development environment with broccoli tooling<br />preconfigured testing with testem.js</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="vertical"
+            slice1angle="10"
+            slice2angle="-15"
+            slice1scale="1.5"
+            slice2scale="1.5"
+            classNames="bg-4"
+        }}
+
+            <div class="deco" data-icon="i"></div>
+            <h2>This presentation is an Ember.Component</h2>
+            <blockquote><p>Codrops article from 2012: <a href="http://tympanus.net/Tutorials/FullscreenSlitSlider/index2.html">SlitSlider</a><br />Reimplemented the jQuery plugin in Ember.js</p></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="horizontal"
+            slice1angle="10"
+            slice2angle="-15"
+            slice1scale="1.5"
+            slice2scale="1.5"
+            classNames="bg-2"
+        }}
+
+            <div class="deco" data-icon="Z"></div>
+            <h2>Thank you!</h2>
+            <blockquote><h3>Questions?</h3></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="vertical"
+            slice1angle="10"
+            slice2angle="-15"
+            slice1scale="1.5"
+            slice2scale="1.5"
+            classNames="bg-2"
+        }}
+            <div class="deco" data-icon="f"></div>
+        {{/codrops-slitslider-slide}}
+
+    {{/codrops-slitslider-slides}}
+
+    {{codrops-slitslider-nav-arrows}}
+
+    {{codrops-slitslider-nav-dots}}
+{{/codrops-slitslider}}
+

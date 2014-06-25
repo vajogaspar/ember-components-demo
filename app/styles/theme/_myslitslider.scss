@@ -1,0 +1,25 @@
+@import "../slitslider/slitslider";
+@import "../slitslider/custom";
+
+.demo-1 .sl-slide blockquote {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 36px;
+    height: 270px;
+    color: #8b8b8b;
+    z-index: 2;
+    bottom: 50%;
+    margin: 0 0 -400px 0;
+    padding: 0;
+}
+
+.demo-1 .sl-slide blockquote p{
+    margin: 0 auto;
+    width: 60%;
+    max-width: 890px;
+    position: relative;
+}

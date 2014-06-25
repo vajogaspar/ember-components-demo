@@ -1,0 +1,28 @@
+{{#if isAnimating}}
+    <div class="sl-content-slice" {{bind-attr style=slice1Style}}>
+        <div class="sl-content-wrapper" {{bind-attr style=contentWrapper1Style}}>
+            <div class="sl-content">
+                <div class="sl-slide-inner">
+                    {{yield}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sl-content-slice" {{bind-attr style=slice2Style}}>
+        <div class="sl-content-wrapper" {{bind-attr style=contentWrapper2Style}}>
+            <div class="sl-content">
+                <div class="sl-slide-inner">
+                    {{yield}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{else}}
+    <div class="sl-content-wrapper" {{bind-attr style=contentWrapperStyle}}>
+        <div class="sl-content">
+            <div class="sl-slide-inner">
+                {{yield}}
+            </div>
+        </div>
+    </div>
+{{/if}}

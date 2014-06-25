@@ -1,0 +1,35 @@
+{{#if template}}
+    {{yield}}
+{{else}}
+    {{#codrops-slitslider-slides}}
+
+        {{#codrops-slitslider-slide
+            orientation="horizontal"
+            slice1angle="-25"
+            slice2angle="-25"
+            slice1scale="2"
+            slice2scale="2"
+        }}
+            <div class="bg-img"></div>
+            <h2>Acta Non Verba.</h2>
+            <blockquote><p>I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.</p><cite>Margi Clarke</cite></blockquote>
+        {{/codrops-slitslider-slide}}
+
+        {{#codrops-slitslider-slide
+            orientation="horizontal"
+            slice1angle="-25"
+            slice2angle="-25"
+            slice1scale="2"
+            slice2scale="2"
+        }}
+            <div class="bg-img"></div>
+            <h2>Acta Non Verba.</h2>
+            <blockquote><p>I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.</p><cite>Margi Clarke</cite></blockquote>
+        {{/codrops-slitslider-slide}}
+
+    {{/codrops-slitslider-slides}}
+
+    {{codrops-slitslider-nav-arrows}}
+
+    {{codrops-slitslider-nav-dots}}
+{{/if}}

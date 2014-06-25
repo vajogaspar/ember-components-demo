@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ComponentsDemo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/components-demo.css">
+  </head>
+  <body>
+    <script>
+      window.ComponentsDemoENV = {{ENV}};
+      window.EmberENV = window.ComponentsDemoENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/components-demo.js"></script>
+    <script>
+      window.ComponentsDemo = require('components-demo/app')['default'].create(ComponentsDemoENV.APP);
+    </script>
+  </body>
+</html>

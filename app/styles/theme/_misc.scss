@@ -1,0 +1,15 @@
+@import "myslitslider";
+
+@import "../spinners/spinner_animations";
+@import "../spinners/spinner_mixins";
+
+@include anim-stretchdelay;
+@include anim-rotate;
+
+.spinner-wave {
+    @include spinner-wave($color: #222);
+}
+
+.spinner-three-quarters {
+    @include spinner-three-quarters($color: #222);
+}
